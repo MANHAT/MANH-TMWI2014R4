@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class name="com.manh.ils.wmservices.hibernate.TMWIPackChuteStaging"
+		table="C_PACK_WAVE_CHUTE_STAGING" lazy="false">
+		<id name="chuteStagingId" type="java.lang.Integer" column="CHUTE_STAGING_ID">
+			<generator class="sequence">
+				<param name="sequence">CHUTE_STAGING_SEQ</param>
+			</generator>
+		</id>
+		<property name="packWaveNbr" type="java.lang.String" column="PACK_WAVE_NBR" />
+		<property name="origChuteId" type="java.lang.String" column="ORIG_CHUTE_ID" />
+		<property name="currChuteId" type="java.lang.String" column="CURR_CHUTE_ID" />
+		<property name="packingStatus" type="java.lang.Integer"
+			column="PACKING_STATUS" />
+		<property name="stagingLocnId" type="java.lang.String"
+			column="STAGING_LOCN_ID" />
+		<property name="userId" type="java.lang.String" column="USER_ID" />
+		<property name="createdDttm" type="java.sql.Timestamp"
+			column="CREATE_DATE_TIME" length="6" />
+		<property name="modDateDttm" type="java.sql.Timestamp"
+			column="MOD_DATE_TIME" length="6" />
+	</class>
+</hibernate-mapping>
